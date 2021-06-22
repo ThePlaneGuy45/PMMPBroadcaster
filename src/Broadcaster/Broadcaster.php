@@ -33,21 +33,25 @@ class Plugin extends PluginBase implements Listener{
         public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
             if($cmd->getName() == "broadcast"){
                 if($sender->hasPermission('broadcaster')){
-                    broadcast($args);
+                    broadcast($sender, $args);
                 }
             }
 	    if($cmd->getName() == "bcast"){
                 if($sender->hasPermission('broadcaster')){
-                    broadcast($args);
+                    broadcast($sender, $args);
                 }
             }
 	    if($cmd->getName() == "bc"){
                 if($sender->hasPermission('broadcaster')){
-                    broadcast($args);
+                    broadcast($sender, $args);
                 }
             }
         }
-        public function broadcast(array $args) {
+        public function broadcast($sender, array $args) {
+	    if(empty($args)){
+		    $sender->sendMessage("Usage: /broadcast <message>");
+		    return;
+	    }
             $msg = implode(" ", $args);
             $prefix = cfg["prefix"];
             $msgcolor = cfg["msgcolor"]
