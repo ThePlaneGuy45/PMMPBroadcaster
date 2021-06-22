@@ -31,7 +31,21 @@ class Plugin extends PluginBase implements Listener{
             $this->getLogger()->info("Disabled Broadcaster");
         }
         public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
-            
+            if($cmd->getName() == "broadcast"){
+                if($sender->hasPermission('broadcaster')){
+                    broadcast($args);
+                }
+            }
+	    if($cmd->getName() == "bcast"){
+                if($sender->hasPermission('broadcaster')){
+                    broadcast($args);
+                }
+            }
+	    if($cmd->getName() == "bc"){
+                if($sender->hasPermission('broadcaster')){
+                    broadcast($args);
+                }
+            }
         }
         public function broadcast(array $args) {
             $msg = implode(" ", $args);
