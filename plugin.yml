@@ -1,0 +1,19 @@
+name: Broadcaster
+author: Dawnkiller2008
+api: [3.0.0-APLHA11]
+version: 1.0
+Main: Broadcaster/Broadcaster
+
+# Commands
+command:
+	broadcast:
+		aliases: [bc, bcast]
+		description: Broadcast A Message
+		usage: /broadcast <message>
+		permission: broadcaster
+
+# Permissions 
+permissions:
+	broadcaster:
+		description: Use /broadcast
+		default: op
