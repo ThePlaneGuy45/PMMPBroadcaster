@@ -13,7 +13,7 @@ use pocketmine\event\Listener;
 
 use pocketmine\utils\TextFormat as C;
 
-class Plugin extends PluginBase implements Listener{
+class Broadcaster extends PluginBase implements Listener{
   
         public $cfg;
   
