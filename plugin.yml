@@ -1,0 +1,26 @@
+name: Broadcaster
+author: Dawnkiller2008
+api: [3.21.0]
+version: 1.0.0
+main: Dawnkiller2008\Broadcaster\Broadcaster
+
+# Commands
+commands:
+ broadcast:
+  aliases: [bc, bcast]
+  description: Broadcast A Message
+  usage: /broadcast <message>
+ bcast:
+  aliases: [bc, bcast]
+  description: Broadcast A Message
+  usage: /broadcast <message>
+ bc:
+  aliases: [bc, bcast]
+  description: Broadcast A Message
+  usage: /broadcast <message>
+
+# Permissions 
+permissions:
+ broadcaster:
+  description: Use /broadcast
+  default: op
