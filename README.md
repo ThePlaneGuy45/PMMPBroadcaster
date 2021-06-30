@@ -10,5 +10,6 @@
 **Config**:
 ```yml
 prefix: *your prefix*
+msgcolor: *chosen color of message (leave blank for generic white)*
 ```
 
