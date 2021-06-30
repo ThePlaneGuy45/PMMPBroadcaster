@@ -12,4 +12,7 @@
 prefix: *your prefix*
 msgcolor: *chosen color of message (leave blank for no color)*
 ```
-
+------------------------------------------------------------------------------------------------
+  
+## Download
+  
